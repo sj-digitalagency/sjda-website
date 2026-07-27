@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SJ Digital Agency | Improving Brands' Digital Growth</title>
+<meta name="description" content="SJ Digital Agency helps brands grow on Instagram and Facebook through strategic content and consistent, organic growth. Remote, Nigeria-based, serving clients worldwide.">
+<link rel="icon" href="logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --orange:#E8631C;
+    --orange-light:#F3894D;
+    --black:#151515;
+    --grey:#6E6E6E;
+    --lightgrey:#F7F7F7;
+    --border:#EAEAEA;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Poppins', sans-serif;
+    color:var(--black);
+    line-height:1.6;
+    background:#fff;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{text-decoration:none; color:inherit;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 24px;}
+  header{
+    position:sticky; top:0; background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+    z-index:100;
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:700; font-size:16px;}
+  .brand img{width:34px; height:34px; object-fit:contain;}
+  .nav-links{display:flex; gap:28px; font-size:14px; font-weight:500;}
+  .nav-links a{color:var(--grey); transition:color .2s;}
+  .nav-links a:hover{color:var(--orange);}
+  .cta-btn{
+    background:var(--orange); color:#fff; padding:10px 22px; border-radius:30px;
+    font-weight:600; font-size:14px; display:inline-block; transition:transform .15s, box-shadow .15s;
+    box-shadow:0 4px 14px rgba(232,99,28,0.25);
+  }
+  .cta-btn:hover{transform:translateY(-2px); box-shadow:0 8px 20px rgba(232,99,28,0.35);}
+  .cta-btn.ghost{background:transparent; color:var(--orange); border:1.5px solid var(--orange); box-shadow:none;}
+
+  .hero{
+    padding:90px 0 70px; text-align:center;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(232,99,28,0.07), transparent 45%),
+      radial-gradient(circle at 85% 15%, rgba(21,21,21,0.05), transparent 40%);
+  }
+  .eyebrow{
+    display:inline-block; font-size:13px; font-weight:600; color:var(--orange);
+    letter-spacing:1.5px; text-transform:uppercase; margin-bottom:18px;
+  }
+  h1{font-size:44px; font-weight:800; line-height:1.15; max-width:720px; margin:0 auto 22px;}
+  h1 span{color:var(--orange);}
+  .lede{font-size:18px; color:var(--grey); max-width:560px; margin:0 auto 34px;}
+  .hero-ctas{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+
+  section{padding:70px 0;}
+  .section-label{font-size:13px; font-weight:700; color:var(--orange); text-transform:uppercase; letter-spacing:1.5px; margin-bottom:10px;}
+  h2{font-size:30px; font-weight:700; margin-bottom:16px;}
+  .section-intro{color:var(--grey); max-width:600px; font-size:16px; margin-bottom:40px;}
+
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;}
+  .about-badge{
+    background:var(--lightgrey); border-radius:16px; padding:30px;
+    border:1px solid var(--border);
+  }
+  .about-badge p{font-size:15px; color:var(--grey); margin-bottom:14px;}
+  .about-badge strong{color:var(--black);}
+  .location-pill{
+    display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid var(--border);
+    padding:8px 16px; border-radius:30px; font-size:13px; font-weight:600; margin-top:6px;
+  }
+  .location-pill::before{content:"\1F30D"; font-size:14px;}
+
+  .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .card{
+    border:1px solid var(--border); border-radius:16px; padding:32px 26px;
+    transition:transform .2s, box-shadow .2s; background:#fff;
+  }
+  .card:hover{transform:translateY(-6px); box-shadow:0 16px 32px rgba(0,0,0,0.08);}
+  .card.featured{border:2px solid var(--orange); position:relative;}
+  .card.featured::before{
+    content:"MOST POPULAR"; position:absolute; top:-12px; left:26px;
+    background:var(--orange); color:#fff; font-size:11px; font-weight:700;
+    padding:4px 12px; border-radius:20px; letter-spacing:0.5px;
+  }
+  .card h3{font-size:19px; font-weight:700; margin-bottom:6px;}
+  .price{font-size:28px; font-weight:800; color:var(--orange); margin:12px 0;}
+  .price span{font-size:14px; color:var(--grey); font-weight:500;}
+  .card ul{list-style:none; margin:18px 0 24px;}
+  .card li{font-size:14px; color:var(--grey); margin-bottom:10px; padding-left:22px; position:relative;}
+  .card li::before{content:"\2713"; position:absolute; left:0; color:var(--orange); font-weight:700;}
+
+  .results{background:var(--black); border-radius:24px; padding:60px 40px; color:#fff; text-align:center;}
+  .results h2{color:#fff;}
+  .results .section-intro{color:#bbb; margin-left:auto; margin-right:auto;}
+  .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:30px; margin-top:20px;}
+  .stat-num{font-size:38px; font-weight:800; color:var(--orange-light);}
+  .stat-label{font-size:14px; color:#ccc; margin-top:6px;}
+
+  .contact{
+    text-align:center; background:linear-gradient(135deg, var(--orange), #ff8a4c);
+    border-radius:24px; padding:60px 40px; color:#fff;
+  }
+  .contact h2{color:#fff;}
+  .contact p{color:rgba(255,255,255,0.9); max-width:480px; margin:0 auto 30px;}
+  .contact .cta-btn{background:#fff; color:var(--orange); box-shadow:none;}
+  .contact .cta-btn.ghost{border-color:#fff; color:#fff;}
+
+  footer{padding:40px 0; text-align:center; color:var(--grey); font-size:13px; border-top:1px solid var(--border);}
+  footer .brand{justify-content:center; margin-bottom:10px; color:var(--black);}
+
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
+  .reveal.active{opacity:1; transform:translateY(0);}
+  .reveal-delay-1.active{transition-delay:.08s;}
+  .reveal-delay-2.active{transition-delay:.16s;}
+
+  @media(max-width:800px){
+    .nav-links{display:none;}
+    h1{font-size:32px;}
+    .about-grid{grid-template-columns:1fr; gap:30px;}
+    .services-grid{grid-template-columns:1fr;}
+    .stats{grid-template-columns:1fr; gap:24px;}
+    section{padding:50px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#top" class="brand" style="text-decoration:none;"><img src="logo.png" alt="SJ Digital Agency logo"> SJ DIGITAL AGENCY</a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="https://forms.gle/yAUWTv4NcVTewCyEA" class="cta-btn">Book a Discovery Call</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Social Media Management &amp; Growth</span>
+    <h1>Improving Brands' <span>Digital Growth</span> — Organically</h1>
+    <p class="lede">We help brands grow on Instagram, Facebook, LinkedIn, and TikTok through strategic content, consistent posting, and real audience growth.</p>
+    <div class="hero-ctas">
+      <a href="https://forms.gle/yAUWTv4NcVTewCyEA" class="cta-btn">Book a Discovery Call</a>
+      <a href="#services" class="cta-btn ghost">See Packages</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <span class="section-label">About SJDA</span>
+      <h2>A remote agency, built for brands anywhere</h2>
+      <p style="color:var(--grey); margin-bottom:16px;">SJ Digital Agency (SJDA) helps brands turn scattered posting into a real growth strategy. We work with beauty, food, fashion, and education brands ready to show up consistently and grow with intention.</p>
+      <p style="color:var(--grey); margin-bottom:16px;">We operate on a 4-step framework — Audit, Positioning, Strategic Posting, and Weekly Tracking — so every post works toward a clear growth goal, not just visibility.</p>
+      <p style="color:var(--grey);"><strong style="color:var(--black);">Platforms we manage:</strong> Instagram, Facebook, LinkedIn, and TikTok. <em>Meta Ads management — coming soon.</em></p>
+    </div>
+    <div class="about-badge reveal reveal-delay-1">
+      <p><strong>Nigeria-based. Built for the world.</strong></p>
+      <p>SJDA operates as a fully remote agency — based in Nigeria, working with clients locally and internationally. Wherever your brand is, we plug into your workflow through WhatsApp, email, and Google Workspace.</p>
+      <span class="location-pill">Remote &middot; Nigeria-based &middot; International clients welcome</span>
+    </div>
+  </div>
+</section>
+
+<section id="services" style="background:var(--lightgrey); border-radius:24px;">
+  <div class="wrap">
+    <span class="section-label">Packages</span>
+    <h2>Choose your growth plan</h2>
+    <p class="section-intro">Simple, transparent monthly packages. Every plan includes strategy, content creation, and scheduling.</p>
+    <div class="services-grid">
+      <div class="card reveal">
+        <h3>Starter</h3>
+        <div class="price">&#8358;80,000<span>/mo</span></div>
+        <ul>
+          <li>Content calendar &amp; captions</li>
+          <li>Consistent weekly posting</li>
+          <li>Basic monthly report</li>
+          <li>Email &amp; WhatsApp support</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfPxLT0pvTDaib6plcHXZbafiEkYy9R5gaIIL3mmHa0zs2_6Q/viewform?usp=pp_url&entry.481689531=%E2%82%A680k%E2%80%93150k&entry.309399807=Starter" class="cta-btn ghost" style="width:100%; text-align:center; display:block;">Get Started</a>
+      </div>
+      <div class="card featured reveal reveal-delay-1">
+        <h3>Growth</h3>
+        <div class="price">&#8358;175,000<span>/mo</span></div>
+        <ul>
+          <li>Weekly content calendar &amp; captions</li>
+          <li>Reels &amp; video content creation</li>
+          <li>Comment-to-DM lead funnel setup</li>
+          <li>Bi-weekly strategy check-ins</li>
+          <li>Monthly performance report</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfPxLT0pvTDaib6plcHXZbafiEkYy9R5gaIIL3mmHa0zs2_6Q/viewform?usp=pp_url&entry.481689531=%E2%82%A6150k%E2%80%93350k&entry.309399807=Growth" class="cta-btn" style="width:100%; text-align:center; display:block;">Get Started</a>
+      </div>
+      <div class="card reveal reveal-delay-2">
+        <h3>Premium</h3>
+        <div class="price">&#8358;355,000<span>/mo</span></div>
+        <ul>
+          <li>Full-service content production (photo &amp; video)</li>
+          <li>Advanced strategy across all platforms</li>
+          <li>Comment-to-DM funnel + optimization</li>
+          <li>Detailed performance reporting</li>
+          <li>Priority scheduling &amp; support</li>
+        </ul>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfPxLT0pvTDaib6plcHXZbafiEkYy9R5gaIIL3mmHa0zs2_6Q/viewform?usp=pp_url&entry.481689531=%E2%82%A6355k%2B&entry.309399807=Premium" class="cta-btn ghost" style="width:100%; text-align:center; display:block;">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="wrap results">
+    <span class="section-label" style="color:var(--orange-light);">Track Record</span>
+    <h2>Real growth, organically</h2>
+    <p class="section-intro">No paid ads. Just strategy, consistency, and content that connects.</p>
+    <div class="stats">
+      <div class="reveal"><div class="stat-num">107 &rarr; 323</div><div class="stat-label">Followers grown for an education brand, with 150+ organic enrollments</div></div>
+      <div class="reveal reveal-delay-1"><div class="stat-num">444%</div><div class="stat-label">Facebook engagement growth for a client brand</div></div>
+      <div class="reveal reveal-delay-2"><div class="stat-num">185.9%</div><div class="stat-label">LinkedIn reach growth for a client brand</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact reveal">
+    <h2>Ready to grow your brand?</h2>
+    <p>Book a free discovery call and let's talk about where your brand is now and where it can go.</p>
+    <div class="hero-ctas">
+      <a href="https://forms.gle/yAUWTv4NcVTewCyEA" class="cta-btn">Book a Discovery Call</a>
+      <a href="https://wa.me/2347084985948" class="cta-btn">Message on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><img src="logo.png" alt="SJ Digital Agency logo" style="width:24px;height:24px;"> SJ DIGITAL AGENCY</div>
+    <p>&copy; 2026 SJ Digital Agency. Improving Brands' Digital Growth.</p>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach((el) => observer.observe(el));
+</script>
+</body>
+</html>
